@@ -1,0 +1,8 @@
+extends base.pug
+
+block content
+    form(method="POST")
+        input(name="currentPw", type="password", placeholder="현재 비밀번호", required=true)
+        input(name="newPw", type="password", placeholder="새로운 비밀번호", required=true)
+        input(name="newPwCheck", type="password", placeholder="새로운 비밀번호 확인", required=true)
+        input(type="submit", value="저장")

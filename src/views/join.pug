@@ -1,0 +1,14 @@
+extends base.pug
+
+block content
+    form(method="POST")
+        if userErrorMessage
+            span=userErrorMessage
+        input(name="userId", type="text", placeholder="아이디", required)
+        input(name="userPw", type="password", placeholder="비밀번호", required)
+        input(name="username", type="text", placeholder="이름", required)
+        if emailErrorMessage
+            span=emailErrorMessage
+        input(name="email", type="email", placeholder="이메일", required)
+        input(name="location", type="text", placeholder="거주지")
+        input(type="submit", value="회원가입")

@@ -1,0 +1,29 @@
+.content{
+    position: relative;
+}
+.myprofile{
+    position: absolute;
+    width: 95%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.myprofile-img{
+    img{
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+    }
+}
+.myprofile-username{
+    padding: 20px 0px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.myprofile-videos{
+    .home__videos{
+        display: grid;
+        gap: 12px;
+    }
+}

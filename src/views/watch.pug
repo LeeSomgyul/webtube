@@ -1,0 +1,29 @@
+extends base.pug
+
+block content
+    div#videoContainer(data-videoid = video._id)
+        video(src="/" + video.videoUrl, controls) 
+        div#videoController
+            button#playBtn 재생
+            button#muteBtn 음소거
+            input(type="range",step="0.1", value="0.5", min="0", max="1")#volumeRange
+            span#currentTime 00:00
+            span  / 
+            span#totalTime 00:00
+            input(type="range",step="1", value="0", min="0")#timeRange
+            button#fullscreenBtn 전체화면
+
+    h3=video.title
+    div
+        span=`조회수 ${video.meta.views} | `
+        span=`${video.createdAt} | `
+        span=video.hastages
+        a(href=`/user/${video.owner._id}`)
+            span=video.owner.username
+    if loggedInUser
+        if String(video.owner._id) === String(loggedInUser._id)
+            a(href=`${video.id}/edit`) 영상 편집 바로가기
+            a(href=`${video.id}/delete`) 영상 삭제하기
+
+block script
+    script(src="/assets/js/videoPlayer.js")

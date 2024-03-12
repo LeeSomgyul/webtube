@@ -1,0 +1,575 @@
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/frontend/scss/styles.scss ***!
+  \************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  padding: 15px 0px 25px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+}
+header .header__logo {
+  color: #fe0000;
+  font-size: 42px;
+  padding-left: 30px;
+}
+header .searchForm {
+  display: flex;
+  width: 750px;
+  height: 55px;
+}
+header .searchForm .searchBox {
+  width: 650px;
+  height: 55px;
+  padding-left: 20px;
+  background-color: white;
+  border: solid 2px #d6d6d6;
+  border-radius: 50px 0px 0px 50px;
+  font-size: 25px;
+}
+header .searchForm .searchBtn {
+  position: relative;
+}
+header .searchForm .searchBtn .searchBtn__input {
+  width: 100px;
+  height: 60px;
+  border-radius: 0px 50px 50px 0px;
+  background-color: #f8f8f8;
+  border: solid 2px #d6d6d6;
+  border-left: none;
+}
+header .searchForm .searchBtn .searchBtn__input:hover {
+  background-color: #efeeee;
+  cursor: pointer;
+}
+header .searchForm .searchBtn i {
+  position: absolute;
+  font-size: 30px;
+  right: 37px;
+  top: 15px;
+  color: #383838;
+}
+header .searchForm .searchBtn i:hover {
+  cursor: pointer;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul li {
+  font-size: 23px;
+}
+header ul .header-login {
+  display: flex;
+  align-items: center;
+  border: solid #eaeaea 2px;
+  border-radius: 100px;
+  padding: 12px 18px;
+  margin-right: 30px;
+  color: #1566df;
+}
+header ul .header-login i {
+  font-size: 28px;
+}
+header ul .header-login span {
+  padding-left: 5px;
+}
+header ul .header-login:hover {
+  background-color: #d7f9ff;
+}
+
+.header-profile img {
+  padding: 0px 20px;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+}
+
+.sidebar {
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+}
+.sidebar .sidebar__link {
+  text-align: center;
+}
+.sidebar .sidebar__li {
+  width: 80px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+.sidebar .sidebar__li i {
+  font-size: 25px;
+  padding-bottom: 8px;
+}
+.sidebar .sidebar__li div {
+  font-size: 15px;
+}
+.sidebar .sidebar__li:hover {
+  cursor: pointer;
+  background-color: #efeeee;
+}
+
+.video-mixin .video-mixin_thumb {
+  background-size: cover;
+  background-position: center;
+  width: 480px;
+  height: 280px;
+  border-radius: 20px;
+}
+.video-mixin .video-mixin_data {
+  padding-top: 20px;
+  display: flex;
+}
+.video-mixin .video-mixin_data .video-mixin_data_profile {
+  padding-right: 18px;
+}
+.video-mixin .video-mixin_data .video-mixin_data_profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.video-mixin .video-mixin_data .video-mixin_title {
+  display: block;
+  font-size: 25px;
+  line-height: 32px;
+}
+.video-mixin .video-mixin_data .video-mixin_user {
+  display: block;
+  padding: 8px 0px 5px 0px;
+  font-size: 19px;
+  color: rgb(87, 87, 87);
+}
+.video-mixin .video-mixin_data .video-mixin_views, .video-mixin .video-mixin_data .video-mixin_createdAt {
+  font-size: 19px;
+  color: rgb(87, 87, 87);
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding-top: 90px;
+}
+
+.main {
+  padding-left: 80px;
+}
+
+.home__videos {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 35px 25px;
+}
+
+.content {
+  position: relative;
+}
+
+.protectview {
+  position: absolute;
+  width: 90%;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.protectview .protectview__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.protectview .protectview__top i {
+  font-size: 100px;
+}
+.protectview .protectview__top div:nth-child(2) {
+  font-size: 30px;
+  padding: 30px 0px;
+}
+.protectview .protectview__top div:last-child {
+  font-size: 20px;
+}
+.protectview .protectview__login {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border: solid #eaeaea 2px;
+  border-radius: 100px;
+  padding: 12px 18px;
+  color: #1566df;
+}
+.protectview .protectview__login i {
+  font-size: 28px;
+}
+.protectview .protectview__login span {
+  padding-left: 5px;
+}
+.protectview .protectview__login:hover {
+  background-color: #d7f9ff;
+}
+
+.content {
+  position: relative;
+}
+
+.login {
+  position: absolute;
+  width: 90%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .login-icon {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.login .login-icon i {
+  color: #fe0000;
+  padding-right: 7px;
+  font-size: 60px;
+}
+.login .login-icon span {
+  color: black;
+  font-size: 45px;
+  font-family: fantasy;
+}
+.login .login-form {
+  padding: 25px 30px 40px 30px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.login .login-form input {
+  height: 50px;
+  width: 400px;
+  border: solid 1px rgb(181, 181, 181);
+  font-size: 20px;
+  padding: 0px 10px;
+}
+.login .login-form .login-form__id div {
+  display: flex;
+  justify-content: start;
+  color: #fe0000;
+}
+.login .login-form .login-form__id input {
+  margin-top: 10px;
+}
+.login .login-form .login-form__pw {
+  padding-top: 5px;
+}
+.login .login-form .login-form__pw div {
+  display: flex;
+  justify-content: start;
+  color: #fe0000;
+}
+.login .login-form .login-form__pw input {
+  margin-top: 10px;
+}
+.login .login-form .login-form__loginBtn {
+  padding-top: 20px;
+}
+.login .login-form .login-form__loginBtn input {
+  width: 420px;
+  border: none;
+  background-color: #fe0000;
+  color: white;
+}
+.login .login-form .login-form__loginBtn input:hover {
+  cursor: pointer;
+  background-color: rgb(209, 0, 0);
+}
+.login .login-form .login-form-join {
+  display: flex;
+  justify-content: start;
+  padding-top: 10px;
+}
+.login .login-form .login-form-join:hover {
+  color: blue;
+}
+.login .login-form .login-form__border {
+  margin: 20px 0px 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login .login-form .login-form__border span:first-child, .login .login-form .login-form__border span:last-child {
+  border: solid 1px gray;
+  width: 190px;
+}
+.login .login-form .login-form__border span:nth-child(2) {
+  font-size: 20px;
+  color: gray;
+}
+.login .login-form .login-form-git {
+  padding: 14px 132px;
+  border: none;
+  background-color: #282828;
+  color: white;
+}
+.login .login-form .login-form-git i {
+  padding-right: 5px;
+  font-size: 25px;
+}
+.login .login-form .login-form-git span {
+  font-size: 20px;
+}
+.login .login-form .login-form-git:hover {
+  background-color: black;
+}
+
+.content {
+  position: relative;
+}
+
+.myprofile {
+  position: absolute;
+  width: 95%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myprofile-img img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.myprofile-username {
+  padding: 20px 0px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.myprofile-videos .home__videos {
+  display: grid;
+  gap: 12px;
+}
+
+.content {
+  position: relative;
+}
+
+.upload {
+  position: absolute;
+  padding-top: 100px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.upload form input {
+  display: flex;
+  justify-content: center;
+}
+
+.upload-label__video {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.upload-input__videofile {
+  padding: 10px 0px 20px 0px;
+  font-size: 20px;
+}
+
+.upload-input__videofile::file-selector-button {
+  padding: 10px 25px;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(39, 87, 243);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-div__title,
+.upload-div__description,
+.upload-div__hastages {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: solid 1px rgb(39, 87, 243);
+  border-radius: 5px;
+}
+.upload-div__title span,
+.upload-div__description span,
+.upload-div__hastages span {
+  color: rgb(39, 87, 243);
+  font-size: 18px;
+}
+.upload-div__title input,
+.upload-div__description input,
+.upload-div__hastages input {
+  border: none;
+  width: 98%;
+  padding: 10px 0px;
+  font-size: 18px;
+}
+.upload-div__title input:focus,
+.upload-div__description input:focus,
+.upload-div__hastages input:focus {
+  outline: none;
+}
+
+.upload-Btn {
+  margin-left: 500px;
+  padding: 10px 25px;
+  font-size: 18px;
+  color: rgb(39, 87, 243);
+  background-color: white;
+  border: solid 1px rgb(39, 87, 243);
+  border-radius: 5px;
+}
+
+.upload-Btn:hover {
+  cursor: pointer;
+  background-color: rgb(39, 87, 243);
+  color: white;
+}
+
+.content {
+  position: relative;
+}
+
+.editProfile {
+  position: absolute;
+  width: 90%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editProfile-picture {
+  display: flex;
+  align-items: center;
+}
+.editProfile-picture label {
+  font-size: 18px;
+  color: rgb(60, 60, 60);
+  padding-right: 50px;
+}
+.editProfile-picture img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.editProfile-picture__input {
+  padding-right: 50px;
+}
+
+.editProfile-picture__input::file-selector-button {
+  padding: 5px 15px;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(112, 112, 112);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editProfile-form {
+  display: flex;
+  align-items: center;
+}
+
+.editProfile-form__text {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(60, 60, 60);
+  padding-right: 80px;
+}
+.editProfile-form__text div {
+  padding: 7px 0px;
+}
+
+.editProfile-form__input {
+  display: flex;
+  flex-direction: column;
+}
+.editProfile-form__input input {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+}

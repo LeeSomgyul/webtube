@@ -1,0 +1,68 @@
+.content{
+    position: relative;
+}
+.upload{
+    position: absolute;
+    padding-top: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    form{
+        input{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+.upload-label__video{
+    font-size: 30px;
+    font-weight: 600;
+}
+.upload-input__videofile{
+    padding: 10px 0px 20px 0px;
+    font-size: 20px;
+}
+.upload-input__videofile::file-selector-button{
+    padding: 10px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(39, 87, 243);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.upload-div__title,
+.upload-div__description,
+.upload-div__hastages{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: solid 1px rgb(39, 87, 243);
+    border-radius: 5px;
+    span{
+        color: rgb(39, 87, 243);
+        font-size: 18px;
+    }
+    input{
+        border: none;
+        width: 98%;
+        padding: 10px 0px;
+        font-size: 18px;
+    }
+    input:focus{
+        outline: none;
+    }
+}
+.upload-Btn{
+    margin-left: 500px;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: rgb(39, 87, 243);
+    background-color: white;
+    border: solid 1px rgb(39, 87, 243);
+    border-radius: 5px;
+}
+.upload-Btn:hover{
+    cursor: pointer;
+    background-color: rgb(39, 87, 243);
+    color: white;
+}

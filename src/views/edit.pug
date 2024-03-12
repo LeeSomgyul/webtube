@@ -1,0 +1,8 @@
+extends base.pug
+
+block content
+    form(method="POST") 
+        input(name="title", placeholder="제목", value=video.title, required)
+        input(name="description", placeholder="설명", type="text", value=video.description, required)
+        input(name="hastages", placeholder="해시태그(콤마로 분리)", type="text", value=video.hastages.join(), required)
+        input(value="저장", type="submit")

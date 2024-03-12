@@ -1,0 +1,25 @@
+extends base.pug
+include mixins/myprofile-video
+
+block content
+    div.myprofile
+        div.myprofile-img
+            if user.githubLogin
+                img(src=user.avatarUrl)
+            if !user.githubLogin
+                if user.avatarUrl === ""
+                    img(src="https://opgg-com-image.akamaized.net/attach/images/20220220075312.1538486.jpg")
+                else
+                    img(src="/" + user.avatarUrl)
+        div.myprofile-username=user.username
+        div
+            if loggedIn
+                if String(loggedInUser._id) === String(user._id)
+                    a(href="/user/edit") 프로필 수정 | 
+                    a(href="/user/logout") 로그아웃 
+        div.myprofile-videos
+            div.home__videos
+                each info in user.videos
+                    +myprofile-video(info)
+                else
+                    li 업로드된 비디오가 없습니다.

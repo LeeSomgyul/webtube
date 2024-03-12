@@ -1,0 +1,36 @@
+.video-mixin{
+    .video-mixin_thumb{
+        background-size: cover;
+        background-position: center;
+        width: 480px;
+        height: 280px;
+        border-radius: 20px;
+    }
+    .video-mixin_data{
+        padding-top: 20px;
+        display: flex;
+        .video-mixin_data_profile{
+            padding-right: 18px;
+            img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
+        .video-mixin_title{
+            display: block;
+            font-size: 25px;
+            line-height: 32px;
+        }
+        .video-mixin_user{
+            display: block;
+            padding: 8px 0px 5px 0px;
+            font-size: 19px;
+            color: rgb(87, 87, 87);
+        }
+        .video-mixin_views, .video-mixin_createdAt{
+            font-size: 19px;
+            color: rgb(87, 87, 87);
+        }
+    }
+}

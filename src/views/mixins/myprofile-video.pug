@@ -1,0 +1,11 @@
+mixin myprofile-video(info)
+    div.video-mixin
+        a(href=`/videos/${info.id}`)
+            div.video-mixin_thumb(style=`background-image:url(${info.thumbnailUrl});`)
+        a(href=`/videos/${info.id}`)
+            div.video-mixin_data
+                div.video-mixin_data_text
+                    span.video-mixin_title #{info.title}
+                    span.video-mixin_user #{info.owner.username}
+                    span.video-mixin_views 조회수 #{info.meta.views}회 •
+                    span.video-mixin_createdAt  #{info.createdAt}

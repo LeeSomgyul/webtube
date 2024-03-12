@@ -1,0 +1,26 @@
+extends base.pug
+
+block content
+    form(method="POST", enctype="multipart/form-data")
+        div.editProfile
+            div.editProfile-picture
+                if !loggedInUser.githubLogin
+                    label(for="avatar") 프로필 사진
+                    input(id="avatar", name="avatar", type="file", accept="image/*").editProfile-picture__input
+                if (!loggedInUser.githubLogin) && (loggedInUser.avatarUrl === "")
+                    img(src="https://opgg-com-image.akamaized.net/attach/images/20220220075312.1538486.jpg")
+                else
+                    img(src="/" + loggedInUser.avatarUrl)
+            div.editProfile-form
+                div.editProfile-form__text
+                    div 이름
+                    div 이메일
+                    div 지역
+                div.editProfile-form__input
+                    input(name="username", type="text", placeholder="이름", value=loggedInUser.username)
+                    input(name="email", type="email", placeholder="이메일", value=loggedInUser.email)
+                    input(name="location", type="text", placeholder="지역", value=loggedInUser.location)
+            input(type="submit", value="저장")
+            if !loggedInUser.githubLogin
+                hr
+                a(href="editPw") 비밀번호 변경 바로가기

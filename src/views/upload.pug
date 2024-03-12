@@ -1,0 +1,19 @@
+extends base.pug
+
+block content
+    div.upload
+        form(method="POST", enctype="multipart/form-data")
+            label(for="video").upload-label__video 비디오 업로드
+            input(name="video", id="video", type="file", accept="video/*", required).upload-input__videofile
+            label(for="thumbnail").upload-label__thuebnail 썸네일 업로드
+            input(name="thumbnail", id="thumbnail", type="file", accept="image/*", required).upload-input__videofile
+            div.upload-div__title
+                span 제목
+                input(name="title", placeholder="동영상을 설명하는 제목 추가", type="text", required, maxlength=20)
+            div.upload-div__description
+                span 설명
+                input(name="description", placeholder="시청자에게 동영상에 대해 설명해 주세요", type="text", required)
+            div.upload-div__hastages
+                span 해시태그
+                input(name="hastages", placeholder="콤마로 분리", type="text", required)
+            input(value="업로드", type="submit").upload-Btn

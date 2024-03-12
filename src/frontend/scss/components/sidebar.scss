@@ -1,0 +1,32 @@
+.sidebar{
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    .sidebar__link{
+        text-align: center;
+    }
+    .sidebar__li{
+        width: 80px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+        i{
+            font-size: 25px;
+            padding-bottom: 8px;
+        }
+        div{
+            font-size: 15px;
+        }
+    }
+    .sidebar__li:hover{
+        cursor: pointer;
+        background-color: #efeeee;
+    }
+    
+}
